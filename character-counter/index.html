@@ -10,55 +10,7 @@
 <meta property="og:title" content="Character Counter — Free Online Character & Word Count Tool">
 <meta property="og:description" content="Paste your text and get instant character, word, sentence and paragraph counts. Free, fast, private — everything runs in your browser.">
 <meta property="og:url" content="https://eqseyu.com/character-counter/">
-<meta name="twitter:card" content="summary">
-<style>
-:root{
-  --bg:#f7f8fa;--card:#ffffff;--ink:#1a2332;--muted:#5b6676;
-  --accent:#2563eb;--accent-soft:#eaf1fe;--border:#e3e7ee;
-  --radius:14px;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
-.wrap{max-width:960px;margin:0 auto;padding:24px 20px 64px}
-header.site{display:flex;align-items:center;justify-content:space-between;padding:16px 0;margin-bottom:8px}
-.brand{font-weight:800;font-size:20px;color:var(--ink);text-decoration:none;letter-spacing:-.02em}
-.brand span{color:var(--accent)}
-nav a{color:var(--muted);text-decoration:none;font-size:14px;margin-left:20px}
-nav a:hover{color:var(--accent)}
-h1{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;line-height:1.25;margin:18px 0 10px}
-.sub{color:var(--muted);font-size:16px;max-width:640px;margin-bottom:24px}
-.panel{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;box-shadow:0 1px 3px rgba(16,24,40,.04)}
-textarea{width:100%;min-height:240px;border:1px solid var(--border);border-radius:10px;padding:14px 16px;font-size:16px;font-family:inherit;resize:vertical;outline:none;color:var(--ink)}
-textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
-.tools{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
-button.btn{border:1px solid var(--border);background:#fff;color:var(--ink);border-radius:8px;padding:8px 14px;font-size:14px;cursor:pointer}
-button.btn:hover{border-color:var(--accent);color:var(--accent)}
-button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
-button.primary:hover{opacity:.9;color:#fff}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:20px}
-.stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px}
-.stat b{display:block;font-size:26px;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.stat span{font-size:13px;color:var(--muted)}
-.kw{margin-top:20px}
-.kw h2{font-size:16px;margin-bottom:10px}
-.kw table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;font-size:14px}
-.kw th,.kw td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--border)}
-.kw th{background:var(--accent-soft);font-weight:600}
-.kw tr:last-child td{border-bottom:none}
-.kw .bar{background:var(--accent);height:6px;border-radius:3px;min-width:2px;display:inline-block;vertical-align:middle}
-article{margin-top:36px}
-article h2{font-size:22px;margin:26px 0 10px;letter-spacing:-.01em}
-article h3{font-size:17px;margin:20px 0 8px}
-article p,article li{color:var(--muted);font-size:15px}
-article ul{padding-left:22px;margin:8px 0}
-article table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
-article th,article td{padding:9px 14px;border-bottom:1px solid var(--border);text-align:left}
-article th{background:var(--accent-soft)}
-footer.site{margin-top:56px;padding-top:20px;border-top:1px solid var(--border);color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-footer.site a{color:var(--muted);text-decoration:none}
-footer.site a:hover{color:var(--accent)}
-.copied{color:#16a34a !important;border-color:#16a34a !important}
-</style>
+<link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
@@ -73,26 +25,49 @@ footer.site a:hover{color:var(--accent)}
 </script>
 </head>
 <body>
-<div class="wrap">
-  <header class="site">
-    <a class="brand" href="/">eqseyu<span>.com</span></a>
-    <nav><a href="/character-counter/">Character Counter</a></nav>
-  </header>
 
-  <h1>Character Counter</h1>
-  <p class="sub">Paste or type your text below — every statistic updates live as you type. Nothing is uploaded; all counting happens in your browser.</p>
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">e</span>eqseyu<span style="color:var(--primary)">.com</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlist').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navlist">
+      <li><a class="nav-item" href="/">Home</a></li>
+      <li><a class="nav-item active" href="/tools/">Tools</a></li>
+      <li class="has-dropdown">
+        <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
+        <ul class="dropdown">
+          <li><a href="/about/">About Us<small>Who we are and what we do</small></a></li>
+          <li><a href="/privacy/">Privacy Policy<small>How we handle data</small></a></li>
+          <li><a href="/contact/">Contact Us<small>Get in touch</small></a></li>
+          <li><a href="/terms/">Terms of Service<small>Using this site</small></a></li>
+        </ul>
+      </li>
+      <li><a class="btn btn-primary nav-cta" href="/tools/">Explore Tools</a></li>
+    </ul>
+  </div>
+</header>
 
-  <div class="panel">
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Character Counter</h1>
+    <p>Paste or type your text — every statistic updates live as you type. Nothing is uploaded; all counting happens in your browser.</p>
+  </div>
+</section>
+
+<div class="wrap" style="padding-bottom:24px">
+  <div class="tool-panel">
     <textarea id="input" placeholder="Type or paste your text here…" autofocus></textarea>
-    <div class="tools">
-      <button class="btn" id="copy">Copy text</button>
-      <button class="btn" id="clear">Clear</button>
-      <button class="btn primary" id="upper">UPPERCASE</button>
-      <button class="btn primary" id="lower">lowercase</button>
+    <div class="tool-actions">
+      <button class="btn btn-ghost" id="copy">Copy text</button>
+      <button class="btn btn-ghost" id="clear">Clear</button>
+      <button class="btn btn-primary" id="upper">UPPERCASE</button>
+      <button class="btn btn-primary" id="lower">lowercase</button>
     </div>
   </div>
 
-  <div class="stats" id="stats">
+  <div class="stats">
     <div class="stat"><b id="s-chars">0</b><span>Characters</span></div>
     <div class="stat"><b id="s-nospace">0</b><span>Characters (no spaces)</span></div>
     <div class="stat"><b id="s-words">0</b><span>Words</span></div>
@@ -102,16 +77,22 @@ footer.site a:hover{color:var(--accent)}
     <div class="stat"><b id="s-read">0s</b><span>Reading time</span></div>
     <div class="stat"><b id="s-speak">0s</b><span>Speaking time</span></div>
   </div>
+</div>
 
-  <div class="kw">
-    <h2>Keyword density (top 5)</h2>
-    <table id="kwtable">
+<section class="block" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 style="font-size:22px">Keyword density (top 5)</h2>
+    </div>
+    <table class="kw-table" id="kwtable">
       <thead><tr><th>Keyword</th><th>Count</th><th>Density</th><th style="width:40%"></th></tr></thead>
       <tbody><tr><td colspan="4" style="color:var(--muted)">Start typing to see keyword density…</td></tr></tbody>
     </table>
   </div>
+</section>
 
-  <article>
+<section class="block alt">
+  <div class="wrap prose">
     <h2>What is a character counter?</h2>
     <p>A character counter is a tool that counts the number of characters, words, sentences and paragraphs in a piece of text in real time. Writers, students, marketers and social media managers use it to keep their text within platform limits without counting by hand.</p>
 
@@ -136,14 +117,45 @@ footer.site a:hover{color:var(--accent)}
     <p>It depends what you're checking. Most platforms count every character including spaces and line breaks, which is why we show both totals. The "no spaces" number is useful for SMS and for tasks where only visible characters matter.</p>
 
     <h3>Is my text private?</h3>
-    <p>Yes. This tool runs entirely in your browser with JavaScript. Your text is never sent to a server, stored, or logged.</p>
-  </article>
+    <p>Yes. This tool runs entirely in your browser with JavaScript. Your text is never sent to a server, stored, or logged. See our <a href="/privacy/">Privacy Policy</a> for details.</p>
+  </div>
+</section>
 
-  <footer class="site">
-    <div>© 2026 eqseyu.com — Free web tools</div>
-    <div><a href="/">Home</a> · <a href="/character-counter/">Character Counter</a></div>
-  </footer>
-</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">eqseyu<span>.com</span></div>
+        <p class="footer-desc">Free, privacy-friendly web tools that run entirely in your browser. No signup, no uploads, no tracking.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/character-counter/">Character Counter</a></li>
+          <li><a href="/tools/">All Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 eqseyu.com. All rights reserved.</div>
+      <div><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></div>
+    </div>
+  </div>
+</footer>
 
 <script>
 (function(){
@@ -195,7 +207,7 @@ footer.site a:hover{color:var(--accent)}
   $('clear').onclick=function(){input.value="";input.focus();count();};
   $('copy').onclick=function(){
     var b=this;
-    navigator.clipboard.writeText(input.value).then(function(){b.textContent="Copied!";b.classList.add("copied");setTimeout(function(){b.textContent="Copy text";b.classList.remove("copied")},1500)});
+    navigator.clipboard.writeText(input.value).then(function(){b.textContent="Copied!";setTimeout(function(){b.textContent="Copy text"},1500)});
   };
   $('upper').onclick=function(){var p=input.selectionStart;input.value=input.value.toUpperCase();input.focus();input.setSelectionRange(p,p);count();};
   $('lower').onclick=function(){var p=input.selectionStart;input.value=input.value.toLowerCase();input.focus();input.setSelectionRange(p,p);count();};
