@@ -3,17 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Twitter Character Counter — Check Your X Post Against 280 Characters | eqseyu.com</title>
-<meta name="description" content="Free Twitter (X) character counter with Twitter's real weighted counting. See how many characters you have left out of 280, and auto-split long text into a thread.">
+<title>Twitter Character Counter | How Many Characters Is This</title>
+<meta name="description" content="A Twitter character counter with the real X weighting. See how many characters is this post, weight links and CJK the way X does, and split long text into a thread.">
 <link rel="canonical" href="https://eqseyu.com/tool/twitter-charactor-generator/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Twitter Character Counter — 280 Character Limit Checker">
-<meta property="og:description" content="Count X post characters the way Twitter does, including CJK double-weighting and 23-character URLs. Auto-split into a thread.">
+<meta property="og:title" content="Twitter Character Counter | How Many Characters Is This">
+<meta property="og:description" content="A Twitter character counter with the real X weighting. See how many characters is this post, weight links and CJK the way X does, and split long text into a thread.">
 <meta property="og:url" content="https://eqseyu.com/tool/twitter-charactor-generator/">
 <link rel="stylesheet" href="/assets/style.css">
 <link rel="stylesheet" href="/assets/tool.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebApplication","name":"Twitter Character Counter","url":"https://eqseyu.com/tool/twitter-charactor-generator/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Count characters for X (Twitter) posts using Twitter's weighted counting, with thread splitting."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://eqseyu.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://eqseyu.com/tools/"},{"@type":"ListItem","position":3,"name":"Twitter Character Counter","item":"https://eqseyu.com/tool/twitter-charactor-generator/"}]}
 </script>
 </head>
 <body>
@@ -54,7 +57,7 @@
             </a>
             <a class="mega-item" href="/tool/twitter-charactor-generator/">
               <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.5L4 20.5l1.6-4.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
-              <span class="mega-txt"><b>Twitter / X Counter</b><small>Weighted 280-character limit</small></span>
+              <span class="mega-txt"><b>Twitter / X Counter</b><small>Weighted 280 character limit</small></span>
             </a>
             <a class="mega-item" href="/tools/">
               <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
@@ -80,8 +83,9 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <h1>Twitter Character Counter</h1>
-    <p>Count your post the way X (Twitter) counts it — with double-weighted CJK characters and 23-character URLs — and auto-split long text into a thread.</p>
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/tools/">Tools</a><span class="sep">/</span><span aria-current="page">Twitter Character Counter</span></nav>
+<h1>Twitter Character Counter</h1>
+    <p>Count your post the way X (Twitter) counts it, with double weighted CJK characters and 23 character URLs, and auto split long text into a thread.</p>
   </div>
 </section>
 
@@ -99,16 +103,16 @@
         <div class="progress-head"><span id="countLabel">0 / 280</span><span id="remainLabel">280 left</span></div>
         <div class="progress" id="bar"><i id="barFill"></i></div>
       </div>
-      <div class="warn-box" id="over">Over the limit by <b id="overBy">0</b> characters. X will not let you post this — trim it or split it into a thread below.</div>
-      <div class="ok-box" id="ok">Fits comfortably — <b id="okLeft">280</b> characters left.</div>
+      <div class="warn-box" id="over">Over the limit by <b id="overBy">0</b> characters. X will not let you post this, trim it or split it into a thread below.</div>
+      <div class="ok-box" id="ok">Fits comfortably, <b id="okLeft">280</b> characters left.</div>
 
       <div class="field" style="margin-top:18px">
         <label for="limit">Post limit</label>
         <select id="limit">
-          <option value="280" selected>280 — standard post</option>
-          <option value="25000">25,000 — X Premium long post</option>
-          <option value="100">100 — profile bio</option>
-          <option value="160">160 — one SMS segment</option>
+          <option value="280" selected>280, standard post</option>
+          <option value="25000">25,000, X Premium long post</option>
+          <option value="100">100, profile bio</option>
+          <option value="160">160, one SMS segment</option>
         </select>
       </div>
     </div>
@@ -126,7 +130,7 @@
       </div>
 
       <div class="panel" style="margin-top:18px">
-        <h2>Thread splitter <small>auto-break at 280</small></h2>
+        <h2>Thread splitter <small>auto break at 280</small></h2>
         <div id="threadOut" style="max-height:280px;overflow:auto;font-size:14px;color:var(--muted)">Type more than the limit to generate thread parts.</div>
         <div class="btn-row">
           <button class="btn btn-ghost btn-sm" id="copyThread">Copy whole thread</button>
@@ -142,7 +146,7 @@
     <table class="data-table">
       <thead><tr><th>Platform / field</th><th class="num">Limit</th><th>Notes</th></tr></thead>
       <tbody>
-        <tr><td>X (Twitter) post</td><td class="num">280</td><td>Weighted — CJK and emoji count as 2</td></tr>
+        <tr><td>X (Twitter) post</td><td class="num">280</td><td>Weighted, CJK and emoji count as 2</td></tr>
         <tr><td>X Premium long post</td><td class="num">25,000</td><td>Requires a paid X Premium subscription</td></tr>
         <tr><td>X profile bio</td><td class="num">160</td><td>Includes emoji in the weighted count</td></tr>
         <tr><td>X direct message</td><td class="num">10,000</td><td>Per message</td></tr>
@@ -157,31 +161,42 @@
 <section class="block">
   <div class="wrap prose">
     <h2>How X counts characters</h2>
-    <p>Twitter doesn't count characters one-for-one. Its counting rules (twitter-text) assign a <strong>weight</strong> to each character based on its Unicode range:</p>
+    <p>Twitter doesn't count characters one for one. Its counting rules (twitter text) assign a <strong>weight</strong> to each character based on its Unicode range:</p>
     <ul>
       <li>Latin letters, digits, standard punctuation and spaces → <strong>1</strong></li>
       <li>CJK (Chinese, Japanese, Korean), Cyrillic, Arabic, Hebrew, Devanagari and most other scripts → <strong>2</strong></li>
-      <li>Most emoji → <strong>2</strong> (emoji with skin-tone modifiers or ZWJ sequences can be higher)</li>
+      <li>Most emoji → <strong>2</strong> (emoji with skin tone modifiers or ZWJ sequences can be higher)</li>
       <li>Any URL → <strong>23</strong>, no matter how long it really is</li>
     </ul>
-    <p>That's why a 140-character Chinese post and a 280-character English post both fill a single tweet.</p>
+    <p>That's why a 140 character Chinese post and a 280 character English post both fill a single tweet.</p>
 
     <h2>When your post is too long</h2>
     <ol>
       <li><strong>Trim ruthlessly first.</strong> Cut adverbs, hedge words ("just", "really", "I think"), and any sentence that restates the previous one.</li>
-      <li><strong>Turn the link into a shorter phrase.</strong> Links cost a flat 23 characters, so shortening the URL text doesn't help — replacing it with "link in bio" might.</li>
+      <li><strong>Turn the link into a shorter phrase.</strong> Links cost a flat 23 characters, so shortening the URL text doesn't help, replacing it with "link in bio" might.</li>
       <li><strong>Split into a thread.</strong> Use the thread splitter on this page: it breaks your text at word boundaries so each part fits within the limit.</li>
-      <li><strong>Move detail to a reply.</strong> Post the hook, then reply with the examples — threads get more reach than one dense post anyway.</li>
+      <li><strong>Move detail to a reply.</strong> Post the hook, then reply with the examples, threads get more reach than one dense post anyway.</li>
     </ol>
 
     <div class="note"><strong>Thread tip:</strong> number your parts (1/5, 2/5 …) before posting. Readers drop off unnumbered threads because they can't tell how much is left.</div>
 
     <h2>Frequently asked questions</h2>
-    <details class="faq"><summary>Why does my counter show 300 when my editor says 280?</summary><div class="faq-body">Your editor likely counts every character as 1. This tool applies Twitter's weighted counting, so CJK characters and emoji are counted as 2 and links as 23 — matching what X actually enforces.</div></details>
-    <details class="faq"><summary>Do emoji count as one or two characters?</summary><div class="faq-body">Usually two. Simple emoji are two code units; emoji with skin-tone modifiers, gender signs or ZWJ sequences (like family emoji) can count as more.</div></details>
+    <details class="faq"><summary>Why does my counter show 300 when my editor says 280?</summary><div class="faq-body">Your editor likely counts every character as 1. This tool applies Twitter's weighted counting, so CJK characters and emoji are counted as 2 and links as 23, matching what X actually enforces.</div></details>
+    <details class="faq"><summary>Do emoji count as one or two characters?</summary><div class="faq-body">Usually two. Simple emoji are two code units. Emoji with skin tone modifiers, gender signs or ZWJ sequences (like family emoji) can count as more.</div></details>
     <details class="faq"><summary>Does a link really count as 23 characters?</summary><div class="faq-body">Yes. Every URL is shortened internally (t.co) and counted as 23 characters, regardless of its real length.</div></details>
     <details class="faq"><summary>Can I write longer posts?</summary><div class="faq-body">With X Premium you can publish long posts up to 25,000 characters. Switch the limit selector above to 25,000 to check against that instead.</div></details>
-    <details class="faq"><summary>Is my draft uploaded anywhere?</summary><div class="faq-body">No. Everything is calculated in your browser — nothing is sent to a server or stored.</div></details>
+    <details class="faq"><summary>Is my draft uploaded anywhere?</summary><div class="faq-body">No. Everything is calculated in your browser, nothing is sent to a server or stored.</div></details>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><h2>Post length questions</h2><p>Why the numbers differ from other counters.</p></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>How many characters is this post?</h3><p>The counter uses the same weighting as X. CJK characters count as two and each link counts as 23 no matter how long the URL is.</p></div>
+      <div class="card"><h3>Why do other counters disagree with X?</h3><p>Most tools count every character as one. X shortens links and weights some scripts, which this page reproduces.</p></div>
+      <div class="card"><h3>Can I split a long post into a thread?</h3><p>Yes. The thread splitter breaks your text at word boundaries and numbers every part.</p></div>
+    </div>
   </div>
 </section>
 
@@ -201,7 +216,7 @@
     <div class="footer-inner">
       <div>
         <div class="footer-brand">eqseyu<span>.com</span></div>
-        <p class="footer-desc">Free, privacy-friendly web tools that run entirely in your browser. No signup, no uploads, no tracking.</p>
+        <p class="footer-desc">Free tools that respect your privacy and run entirely in your browser. No signup, no uploads, no tracking.</p>
       </div>
       <div><h4>Tools</h4><ul>
         <li><a href="/character-counter/">Character Counter</a></li>
