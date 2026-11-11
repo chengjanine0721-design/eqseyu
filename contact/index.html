@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | eqseyu.com</title>
+<meta name="description" content="Get in touch with the eqseyu.com team — feedback, bug reports, tool requests and general questions.">
+<link rel="canonical" href="https://eqseyu.com/contact/">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">e</span>eqseyu<span style="color:var(--primary)">.com</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlist').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navlist">
+      <li><a class="nav-item" href="/">Home</a></li>
+      <li><a class="nav-item" href="/tools/">Tools</a></li>
+      <li class="has-dropdown">
+        <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
+        <ul class="dropdown">
+          <li><a href="/about/">About Us<small>Who we are and what we do</small></a></li>
+          <li><a href="/privacy/">Privacy Policy<small>How we handle data</small></a></li>
+          <li><a href="/contact/">Contact Us<small>Get in touch</small></a></li>
+          <li><a href="/terms/">Terms of Service<small>Using this site</small></a></li>
+        </ul>
+      </li>
+      <li><a class="btn btn-primary nav-cta" href="/tools/">Explore Tools</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Contact Us</h1>
+    <p>Feedback, bug reports and tool requests are always welcome.</p>
+  </div>
+</section>
+
+<section class="block" style="padding-top:8px">
+  <div class="wrap">
+    <div class="tool-panel form-card">
+      <form id="cform">
+        <label for="cname">Your name</label>
+        <input id="cname" type="text" placeholder="Jane Doe" required>
+        <label for="cmail">Your email</label>
+        <input id="cmail" type="email" placeholder="you@example.com" required>
+        <label for="cmsg">Message</label>
+        <textarea id="cmsg" placeholder="Tell us what's on your mind…" required style="min-height:140px"></textarea>
+        <br><br>
+        <button class="btn btn-primary btn-lg" type="submit" style="width:100%">Send Message</button>
+        <div class="form-status" id="cstatus"></div>
+      </form>
+    </div>
+    <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:18px">
+      Prefer email? Write to us directly at <a href="mailto:contact@eqseyu.com">contact@eqseyu.com</a>
+    </p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">eqseyu<span>.com</span></div>
+        <p class="footer-desc">Free, privacy-friendly web tools that run entirely in your browser. No signup, no uploads, no tracking.</p>
+      </div>
+      <div>
+        <h4>Tools</h4>
+        <ul>
+          <li><a href="/character-counter/">Character Counter</a></li>
+          <li><a href="/tools/">All Tools</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/contact/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 eqseyu.com. All rights reserved.</div>
+      <div><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('cform').addEventListener('submit',function(e){
+  e.preventDefault();
+  var s=document.getElementById('cstatus');
+  s.style.display='block';
+  s.textContent='Thanks! Your default mail app is opening — just hit send to deliver your message.';
+  var name=encodeURIComponent(document.getElementById('cname').value);
+  var mail=encodeURIComponent(document.getElementById('cmail').value);
+  var msg=encodeURIComponent(document.getElementById('cmsg').value);
+  window.location.href='mailto:contact@eqseyu.com?subject='+encodeURIComponent('eqseyu.com message from '+name)+'&body='+encodeURIComponent('From: '+decodeURIComponent(mail)+'\n\n'+decodeURIComponent(msg));
+});
+</script>
+</body>
+</html>
