@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Words to Pages Calculator — Convert Words ↔ Pages Instantly | eqseyu.com</title>
+<meta name="description" content="Free words to pages calculator. Convert word count to pages (or pages to words) for essays, reports and books — by font, size, line spacing and page format. Includes A4/Letter and single/double-spaced tables.">
+<link rel="canonical" href="https://eqseyu.com/tool/words-to-page-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Words to Pages Calculator — Free Word ↔ Page Converter">
+<meta property="og:description" content="Enter a word count and get the page count for your font, size and line spacing. Works both ways: words to pages and pages to words.">
+<meta property="og:url" content="https://eqseyu.com/tool/words-to-page-calculator/">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/tool.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Words to Pages Calculator","url":"https://eqseyu.com/tool/words-to-page-calculator/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert word counts to page counts and back, based on font, size, line spacing and page format."}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">e</span>eqseyu<span style="color:var(--primary)">.com</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlist').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlist">
+      <li><a class="nav-item" href="/">Home</a></li>
+      <li><a class="nav-item active" href="/tools/">Tools</a></li>
+      <li class="has-dropdown">
+        <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
+        <ul class="dropdown">
+          <li><a href="/about/">About Us<small>Who we are and what we do</small></a></li>
+          <li><a href="/privacy/">Privacy Policy<small>How we handle data</small></a></li>
+          <li><a href="/contact/">Contact Us<small>Get in touch</small></a></li>
+          <li><a href="/terms/">Terms of Service<small>Using this site</small></a></li>
+        </ul>
+      </li>
+      <li><a class="btn btn-primary nav-cta" href="/tools/">Explore Tools</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Words to Pages Calculator</h1>
+    <p>Convert a word count into pages — or pages into words — based on the exact font, size, line spacing and paper format you're using.</p>
+  </div>
+</section>
+
+<div class="wrap" style="padding-bottom:36px">
+  <div class="tool-layout">
+    <div class="panel">
+      <div class="segmented" id="mode">
+        <button class="active" data-mode="w2p">Words → Pages</button>
+        <button data-mode="p2w">Pages → Words</button>
+      </div>
+
+      <div class="field">
+        <label for="amount" id="amountLabel">Number of words</label>
+        <input type="number" id="amount" value="1000" min="0" step="1">
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="font">Font</label>
+          <select id="font">
+            <option value="times">Times New Roman</option>
+            <option value="arial">Arial</option>
+            <option value="calibri">Calibri</option>
+            <option value="garamond">Garamond</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="size">Font size</label>
+          <select id="size">
+            <option value="12">12 pt</option>
+            <option value="11">11 pt</option>
+            <option value="10">10 pt</option>
+            <option value="14">14 pt</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field-row">
+        <div class="field">
+          <label for="spacing">Line spacing</label>
+          <select id="spacing">
+            <option value="single">Single</option>
+            <option value="onehalf">1.5 lines</option>
+            <option value="double" selected>Double</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="paper">Paper size</label>
+          <select id="paper">
+            <option value="letter">US Letter (8.5 × 11 in)</option>
+            <option value="a4" selected>A4 (210 × 297 mm)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="margins">Margins</label>
+        <select id="margins">
+          <option value="1" selected>1 inch (normal)</option>
+          <option value="0.75">0.75 inch</option>
+          <option value="0.5">0.5 inch</option>
+          <option value="1.25">1.25 inch</option>
+        </select>
+      </div>
+
+      <div class="note"><strong>Assumes</strong> continuous body text with no images, headings or blank lines. A title page, references and figures add pages on top of this estimate.</div>
+    </div>
+
+    <div>
+      <div class="result">
+        <div class="num" id="resultNum">4.0</div>
+        <div class="unit" id="resultUnit">pages (double-spaced)</div>
+        <div class="split">
+          <div><b id="s-wpp">250</b><span>words per page</span></div>
+          <div><b id="s-ppw">250</b><span id="s-ppw-label">words per page</span></div>
+        </div>
+      </div>
+      <div class="panel" style="margin-top:18px">
+        <h2>Quick presets <small>convert immediately</small></h2>
+        <div class="chip-row">
+          <button class="chip" data-w="250">250 words</button>
+          <button class="chip" data-w="500">500 words</button>
+          <button class="chip" data-w="750">750 words</button>
+          <button class="chip" data-w="1000">1,000 words</button>
+          <button class="chip" data-w="1500">1,500 words</button>
+          <button class="chip" data-w="2000">2,000 words</button>
+          <button class="chip" data-w="3000">3,000 words</button>
+          <button class="chip" data-w="5000">5,000 words</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="block alt" style="padding:56px 0">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px"><h2 style="font-size:24px">Words per page — quick reference</h2></div>
+    <table class="data-table">
+      <thead><tr><th>Word count</th><th class="num">Single-spaced (12 pt Times)</th><th class="num">1.5-spaced</th><th class="num">Double-spaced</th></tr></thead>
+      <tbody>
+        <tr><td>250 words</td><td class="num">≈ 0.5 page</td><td class="num">≈ 0.8 page</td><td class="num">1 page</td></tr>
+        <tr><td>500 words</td><td class="num">1 page</td><td class="num">≈ 1.5 pages</td><td class="num">2 pages</td></tr>
+        <tr><td>750 words</td><td class="num">1.5 pages</td><td class="num">≈ 2.3 pages</td><td class="num">3 pages</td></tr>
+        <tr><td>1,000 words</td><td class="num">2 pages</td><td class="num">3 pages</td><td class="num">4 pages</td></tr>
+        <tr><td>1,500 words</td><td class="num">3 pages</td><td class="num">≈ 4.5 pages</td><td class="num">6 pages</td></tr>
+        <tr><td>2,000 words</td><td class="num">4 pages</td><td class="num">6 pages</td><td class="num">8 pages</td></tr>
+        <tr><td>3,000 words</td><td class="num">6 pages</td><td class="num">9 pages</td><td class="num">12 pages</td></tr>
+        <tr><td>5,000 words</td><td class="num">10 pages</td><td class="num">15 pages</td><td class="num">20 pages</td></tr>
+      </tbody>
+    </table>
+    <p style="color:var(--muted);font-size:13px;margin-top:12px">Based on A4 paper, 1-inch margins, standard body text. Your word processor's exact render will vary slightly.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap prose">
+    <h2>How to use the words to pages calculator</h2>
+    <ol>
+      <li><strong>Choose the direction.</strong> Pick <em>Words → Pages</em> if you know your word count and need the page count. Pick <em>Pages → Words</em> if you have a page limit and need to know how much you can write.</li>
+      <li><strong>Enter the number.</strong> Type your word count (or page count) in the box — the result updates instantly.</li>
+      <li><strong>Match your document settings.</strong> Font, size, line spacing, paper size and margins each change how many words fit on a page. Set them to match your assignment or template.</li>
+      <li><strong>Read the result.</strong> The big number is your estimated page count; below it you'll see the words-per-page figure the estimate is based on.</li>
+    </ol>
+
+    <h2>Why the font and spacing matter so much</h2>
+    <p>A page holds its words in a fixed area, so anything that changes line height or character width changes the count:</p>
+    <table>
+      <tr><th>Setting</th><th>Effect on words per page</th></tr>
+      <tr><td>Double spacing</td><td>Halves the words per page compared with single spacing</td></tr>
+      <tr><td>1.5 line spacing</td><td>About two-thirds of the single-spaced count</td></tr>
+      <tr><td>Larger font (14 pt vs 12 pt)</td><td>Roughly 25–30% fewer words per page</td></tr>
+      <tr><td>Wider margins (1.25 in vs 1 in)</td><td>About 10% fewer words per page</td></tr>
+      <tr><td>Narrower margins (0.5 in)</td><td>About 20% more words per page</td></tr>
+    </table>
+
+    <h2>Common academic requirements</h2>
+    <ul>
+      <li><strong>Double-spaced, 12 pt Times New Roman</strong> is the MLA standard — plan on <strong>250 words per page</strong>.</li>
+      <li><strong>APA 7th edition</strong> also requires double spacing with 1-inch margins, so the same 250-word figure applies.</li>
+      <li><strong>College application essays</strong> usually specify 500–650 words, which is roughly 2–2.5 double-spaced pages.</li>
+      <li><strong>Book manuscripts</strong> are typically estimated at 250 words per page double-spaced, so a 80,000-word novel is about 320 pages.</li>
+    </ul>
+
+    <div class="note"><strong>Heads-up:</strong> the estimate assumes continuous paragraphs. Short paragraphs, headings, bullet lists, tables and images all reduce text density and add pages — a document full of one-line paragraphs can run 30–40% longer than this calculator suggests.</div>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>How many pages is 1,000 words?</summary><div class="faq-body">About 2 pages single-spaced or 4 pages double-spaced in 12 pt Times New Roman on A4 with 1-inch margins. In 11 pt Arial single-spaced it's closer to 1.8 pages.</div></details>
+    <details class="faq"><summary>How many words are on one page?</summary><div class="faq-body">A standard double-spaced page holds about 250 words; a single-spaced page holds about 500. This is the convention publishers and universities use for quick estimates.</div></details>
+    <details class="faq"><summary>Does this calculator count spaces?</summary><div class="faq-body">It works in words, not characters. Spacing between words is already baked into the words-per-page constants. If you need character counts, use our <a href="/character-counter/">character counter</a>.</div></details>
+    <details class="faq"><summary>Why is my Word document longer than the estimate?</summary><div class="faq-body">Word adds space before/after paragraphs by default, plus a title block, page numbers and headings. Set paragraph spacing to zero and the estimate will match more closely.</div></details>
+    <details class="faq"><summary>Is this tool free and private?</summary><div class="faq-body">Yes — no sign-up, no upload, and all math runs in your browser.</div></details>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sec-head"><h2 style="font-size:24px">Related tools</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><div class="ico">🔤</div><h3><a href="/tool/character-to-words-calculator/" style="color:inherit">Characters to Words</a></h3><p>Convert a character count into an estimated word count.</p></div>
+      <div class="card"><div class="ico">📝</div><h3><a href="/tool/eassy-word-counter/" style="color:inherit">Essay Word Counter</a></h3><p>Track your essay against a target word count with live progress.</p></div>
+      <div class="card"><div class="ico">✍️</div><h3><a href="/character-counter/" style="color:inherit">Character Counter</a></h3><p>Live character, word, sentence and paragraph statistics.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">eqseyu<span>.com</span></div>
+        <p class="footer-desc">Free, privacy-friendly web tools that run entirely in your browser. No signup, no uploads, no tracking.</p>
+      </div>
+      <div><h4>Tools</h4><ul>
+        <li><a href="/character-counter/">Character Counter</a></li>
+        <li><a href="/tool/words-to-page-calculator/">Words to Pages</a></li>
+        <li><a href="/tools/">All Tools</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 eqseyu.com. All rights reserved.</div>
+      <div><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var fontF={times:1,arial:1.08,calibri:1.14,garamond:.86};
+  var sizeF={'10':1.22,'11':1.11,'12':1,'14':.86};
+  var spaceF={single:1,onehalf:1/1.5,double:.5};
+  var paperF={letter:1,a4:1.03};
+  var marginF={'1':1,'0.75':1.11,'0.5':1.22,'1.25':.9};
+  var mode='w2p';
+  var $=function(id){return document.getElementById(id)};
+  var BASE=500; // words on one single-spaced 12pt Times Letter page
+
+  function wpp(){
+    return Math.round(BASE*fontF[$('font').value]*sizeF[$('size').value]*spaceF[$('spacing').value]*paperF[$('paper').value]*marginF[$('margins').value]);
+  }
+  function calc(){
+    var per=wpp();
+    var v=parseFloat($('amount').value)||0;
+    if(mode==='w2p'){
+      var pages=v/per;
+      $('resultNum').textContent=pages.toFixed(pages<10?1:0);
+      $('resultUnit').textContent='page'+(pages.toFixed(1)==='1.0'?'':'s')+' ('+labelSpacing()+')';
+      $('s-wpp').textContent=per.toLocaleString();
+      $('s-ppw-label').textContent='words per page';
+      $('s-ppw').textContent=(pages?Math.ceil(pages):0).toLocaleString();
+      $('s-ppw-label').textContent='pages when rounded up';
+    }else{
+      var words=Math.round(v*per);
+      $('resultNum').textContent=words.toLocaleString();
+      $('resultUnit').textContent='words ('+labelSpacing()+')';
+      $('s-wpp').textContent=per.toLocaleString();
+      $('s-ppw').textContent=v.toFixed(v<10?1:0);
+      $('s-ppw-label').textContent='pages entered';
+    }
+  }
+  function labelSpacing(){
+    var s=$('spacing').value;
+    return s==='double'?'double-spaced':s==='onehalf'?'1.5-spaced':'single-spaced';
+  }
+  document.querySelectorAll('#mode button').forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll('#mode button').forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+      mode=b.dataset.mode;
+      $('amountLabel').textContent=mode==='w2p'?'Number of words':'Number of pages';
+      $('amount').value=mode==='w2p'?1000:4;
+      calc();
+    };
+  });
+  document.querySelectorAll('.chip').forEach(function(b){
+    b.onclick=function(){ $('amount').value=b.dataset.w; calc(); };
+  });
+  ['amount','font','size','spacing','paper','margins'].forEach(function(id){
+    $(id).addEventListener('input',calc);
+    $(id).addEventListener('change',calc);
+  });
+  calc();
+})();
+</script>
+</body>
+</html>
