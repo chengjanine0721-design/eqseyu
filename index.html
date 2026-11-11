@@ -22,7 +22,46 @@
     </button>
     <ul class="nav-links" id="navlist">
       <li><a class="nav-item active" href="/">Home</a></li>
-      <li><a class="nav-item" href="/tools/">Tools</a></li>
+      <li class="has-dropdown has-mega">
+        <a class="nav-item" href="/tools/" onclick="if(window.matchMedia('(max-width:768px)').matches){this.parentElement.classList.toggle('open');return false;}">Tools <span class="caret"></span></a>
+        <div class="dropdown dropdown-mega">
+          <div class="mega-grid">
+            <a class="mega-item" href="/character-counter/">
+              <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg></span>
+              <span class="mega-txt"><b>Character Counter</b><small>Live character, word &amp; sentence count</small></span>
+            </a>
+            <a class="mega-item" href="/tool/words-to-page-calculator/">
+              <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5"/></svg></span>
+              <span class="mega-txt"><b>Words to Pages</b><small>Convert words into page counts</small></span>
+            </a>
+            <a class="mega-item" href="/tool/character-to-words-calculator/">
+              <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13l-3-3"/><path d="M20 16H7l3 3"/></svg></span>
+              <span class="mega-txt"><b>Characters to Words</b><small>Estimate words from any character count</small></span>
+            </a>
+            <a class="mega-item" href="/tool/eassy-word-counter/">
+              <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h12M8 12h12M8 18h8"/><path d="M4 6h.01M4 12h.01M4 18h.01"/></svg></span>
+              <span class="mega-txt"><b>Essay Word Counter</b><small>Track essay length against your target</small></span>
+            </a>
+            <a class="mega-item" href="/tool/upper-case-generator/">
+              <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg></span>
+              <span class="mega-txt"><b>Uppercase Generator</b><small>UPPER, Title, Sentence &amp; aLtErNaTiNg</small></span>
+            </a>
+            <a class="mega-item" href="/tool/lower-case-generator/">
+              <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="M6 13l6 6 6-6"/></svg></span>
+              <span class="mega-txt"><b>Lowercase Generator</b><small>lowercase, camelCase &amp; snake_case</small></span>
+            </a>
+            <a class="mega-item" href="/tool/twitter-charactor-generator/">
+              <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.5L4 20.5l1.6-4.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span>
+              <span class="mega-txt"><b>Twitter / X Counter</b><small>Weighted 280-character limit</small></span>
+            </a>
+            <a class="mega-item" href="/tools/">
+              <span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+              <span class="mega-txt"><b>All Tools</b><small>See every tool in one place</small></span>
+            </a>
+          </div>
+          <a class="mega-all" href="/tools/">Browse all 7 tools <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </li>
       <li class="has-dropdown">
         <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
         <ul class="dropdown">
