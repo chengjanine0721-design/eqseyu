@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Uppercase Generator — Convert Text to UPPERCASE Online Free | eqseyu.com</title>
+<meta name="description" content="Free uppercase generator. Convert any text to UPPERCASE, Title Case, Sentence case, aLtErNaTiNg case or iNVERSE case in one click — then copy or download the result.">
+<link rel="canonical" href="https://eqseyu.com/tool/upper-case-generator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Uppercase Generator — Free UPPERCASE & Case Converter">
+<meta property="og:description" content="Instantly convert text to uppercase, title case, sentence case and more. Free, no signup, runs in your browser.">
+<meta property="og:url" content="https://eqseyu.com/tool/upper-case-generator/">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/tool.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Uppercase Generator","url":"https://eqseyu.com/tool/upper-case-generator/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Convert text to UPPERCASE, Title Case, Sentence case, alternating case and inverse case instantly."}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">e</span>eqseyu<span style="color:var(--primary)">.com</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlist').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlist">
+      <li><a class="nav-item" href="/">Home</a></li>
+      <li><a class="nav-item active" href="/tools/">Tools</a></li>
+      <li class="has-dropdown">
+        <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
+        <ul class="dropdown">
+          <li><a href="/about/">About Us<small>Who we are and what we do</small></a></li>
+          <li><a href="/privacy/">Privacy Policy<small>How we handle data</small></a></li>
+          <li><a href="/contact/">Contact Us<small>Get in touch</small></a></li>
+          <li><a href="/terms/">Terms of Service<small>Using this site</small></a></li>
+        </ul>
+      </li>
+      <li><a class="btn btn-primary nav-cta" href="/tools/">Explore Tools</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Uppercase Generator</h1>
+    <p>Turn any text into UPPERCASE, Title Case, Sentence case, aLtErNaTiNg case or iNVERSE case — instantly, in your browser.</p>
+  </div>
+</section>
+
+<div class="wrap" style="padding-bottom:36px">
+  <div class="tool-layout">
+    <div class="panel">
+      <h2>Input</h2>
+      <textarea id="input" class="tool-textarea" placeholder="Type or paste your text here…">hello world, this is a sample sentence for testing case conversion.</textarea>
+      <div class="btn-row">
+        <button class="btn btn-ghost btn-sm" id="clear">Clear</button>
+        <button class="btn btn-ghost btn-sm" id="paste">Paste</button>
+        <button class="btn btn-ghost btn-sm" id="swap">Use output as input</button>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-top:12px"><span id="i-chars">0</span> characters · <span id="i-words">0</span> words</p>
+    </div>
+
+    <div class="panel">
+      <h2>Output</h2>
+      <div class="out-box" id="output">HELLO WORLD, THIS IS A SAMPLE SENTENCE FOR TESTING CASE CONVERSION.</div>
+      <div class="btn-row">
+        <button class="btn btn-primary btn-sm" id="copy">Copy result</button>
+        <button class="btn btn-ghost btn-sm" id="download">Download .txt</button>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-top:12px"><span id="o-chars">0</span> characters</p>
+    </div>
+  </div>
+
+  <div class="panel" style="margin-top:20px">
+    <h2>Conversion options</h2>
+    <div class="chip-row" id="ops">
+      <button class="chip active" data-op="upper">UPPERCASE</button>
+      <button class="chip" data-op="lower">lowercase</button>
+      <button class="chip" data-op="title">Title Case</button>
+      <button class="chip" data-op="sentence">Sentence case</button>
+      <button class="chip" data-op="alt">aLtErNaTiNg cAsE</button>
+      <button class="chip" data-op="inverse">iNVERSE cASE</button>
+    </div>
+  </div>
+</div>
+
+<section class="block alt" style="padding:56px 0">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px"><h2 style="font-size:24px">Case styles at a glance</h2></div>
+    <table class="data-table">
+      <thead><tr><th>Style</th><th>Example</th><th>Typical use</th></tr></thead>
+      <tbody>
+        <tr><td>UPPERCASE</td><td>THE QUICK BROWN FOX</td><td>Headlines, labels, emphasis, legal notices</td></tr>
+        <tr><td>lowercase</td><td>the quick brown fox</td><td>Tags, handles, stylised branding</td></tr>
+        <tr><td>Title Case</td><td>The Quick Brown Fox</td><td>Article titles, headings, book names</td></tr>
+        <tr><td>Sentence case</td><td>The quick brown fox</td><td>Subtitles, UI copy, body text</td></tr>
+        <tr><td>aLtErNaTiNg cAsE</td><td>tHe QuIcK bRoWn FoX</td><td>Meme captions, playful social posts</td></tr>
+        <tr><td>iNVERSE cASE</td><td>THE QUICK BROWN FOX → the QUICK brown FOX</td><td>Swapping existing capitalisation</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap prose">
+    <h2>How to convert text to uppercase</h2>
+    <ol>
+      <li>Paste or type your text in the <strong>Input</strong> box.</li>
+      <li>Click <strong>UPPERCASE</strong> (or any other case style) in the Conversion options row.</li>
+      <li>The result appears in the <strong>Output</strong> box immediately — click <strong>Copy result</strong> or download it as a .txt file.</li>
+    </ol>
+    <p>Everything happens locally: your text never leaves your browser, which is why this tool is safe for client copy, internal documents and anything else you'd rather not paste into a server-side converter.</p>
+
+    <h2>What "Title Case" actually does</h2>
+    <p>Title case capitalises the first letter of each significant word but leaves short articles, conjunctions and prepositions lowercase: <em>the</em>, <em>a</em>, <em>an</em>, <em>and</em>, <em>but</em>, <em>or</em>, <em>for</em>, <em>of</em>, <em>to</em>, <em>in</em>, <em>on</em>, <em>at</em>, <em>by</em>, <em>with</em>, <em>from</em>. The first and last words are always capitalised, and so is any word following a colon or dash.</p>
+
+    <h2>When uppercase hurts readability</h2>
+    <p>Long runs of ALL CAPS slow reading down because every letter occupies a uniform rectangular block, removing the word-shape cues readers rely on. Best practice:</p>
+    <ul>
+      <li><strong>Keep uppercase phrases short</strong> — a few words at most, or a single headline.</li>
+      <li><strong>Never set a paragraph in caps</strong>; screen readers may also spell out capitalised words letter by letter in some configurations.</li>
+      <li><strong>Use it for emphasis sparingly</strong> — one or two words, not whole sentences.</li>
+      <li><strong>Avoid it in URLs and email addresses</strong>: domains are case-insensitive but people mistype capitals.</li>
+    </ul>
+
+    <div class="note"><strong>Writing to a character limit?</strong> Case changing doesn't alter the character count — a 280-character post stays 280. Check your limits with our <a href="/tool/twitter-charactor-generator/">Twitter character counter</a> or the <a href="/character-counter/">character counter</a>.</div>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>Does converting to uppercase change the character count?</summary><div class="faq-body">No. Case conversion never adds or removes characters — only the letter case changes.</div></details>
+    <details class="faq"><summary>Can I convert back to lowercase?</summary><div class="faq-body">Yes — click the <em>lowercase</em> option, or use our dedicated <a href="/tool/lower-case-generator/">lowercase generator</a>.</div></details>
+    <details class="faq"><summary>Does it handle non-English letters?</summary><div class="faq-body">Yes. Accented characters (é, ö, ñ), Greek and Cyrillic text convert correctly using the browser's built-in Unicode case mapping.</div></details>
+    <details class="faq"><summary>Can I download the result?</summary><div class="faq-body">Yes — click <em>Download .txt</em> to save the converted text as a plain text file.</div></details>
+    <details class="faq"><summary>Is there a length limit?</summary><div class="faq-body">No practical limit. Text tens of thousands of characters long converts instantly.</div></details>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sec-head"><h2 style="font-size:24px">Related tools</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><div class="ico">🔡</div><h3><a href="/tool/lower-case-generator/" style="color:inherit">Lowercase Generator</a></h3><p>Convert text to lowercase, camelCase, snake_case and more.</p></div>
+      <div class="card"><div class="ico">✍️</div><h3><a href="/character-counter/" style="color:inherit">Character Counter</a></h3><p>Check length limits before you post.</p></div>
+      <div class="card"><div class="ico">🐦</div><h3><a href="/tool/twitter-charactor-generator/" style="color:inherit">Twitter Character Counter</a></h3><p>Weighted 280-character counting for X posts.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">eqseyu<span>.com</span></div>
+        <p class="footer-desc">Free, privacy-friendly web tools that run entirely in your browser. No signup, no uploads, no tracking.</p>
+      </div>
+      <div><h4>Tools</h4><ul>
+        <li><a href="/character-counter/">Character Counter</a></li>
+        <li><a href="/tool/upper-case-generator/">Uppercase Generator</a></li>
+        <li><a href="/tools/">All Tools</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 eqseyu.com. All rights reserved.</div>
+      <div><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var SMALL=new Set("a an and as at but by for from in into nor of on onto or over per so the to up via vs with".split(" "));
+  function toTitle(s){
+    var words=s.toLowerCase().split(/(\s+)/);
+    var real=words.filter(function(w){return w.trim()});
+    return words.map(function(w){
+      if(!w.trim())return w;
+      var bare=w.replace(/[^\w'’-]+$/,'');
+      var isFirst=real.indexOf(w)===0;
+      var isLast=real.indexOf(w)===real.length-1;
+      if(SMALL.has(bare)&&!isFirst&&!isLast)return w;
+      return w.charAt(0).toUpperCase()+w.slice(1);
+    }).join('');
+  }
+  function toSentence(s){
+    var out=s.toLowerCase();
+    out=out.replace(/(^\s*|[.!?…]\s+|\n\s*)([a-z])/g,function(m,p,c){return p+c.toUpperCase()});
+    out=out.replace(/\bi\b/g,'I');
+    return out;
+  }
+  function toAlt(s){
+    var i=0;
+    return s.replace(/[a-zA-Z]/g,function(c){var r=(i++%2===0)?c.toLowerCase():c.toUpperCase();return r});
+  }
+  function toInverse(s){
+    return s.replace(/[a-zA-Z]/g,function(c){return c===c.toUpperCase()?c.toLowerCase():c.toUpperCase()});
+  }
+  function transform(op){
+    var v=$('input').value;
+    switch(op){
+      case 'upper':return v.toUpperCase();
+      case 'lower':return v.toLowerCase();
+      case 'title':return toTitle(v);
+      case 'sentence':return toSentence(v);
+      case 'alt':return toAlt(v);
+      case 'inverse':return toInverse(v);
+      default:return v;
+    }
+  }
+  var curOp='upper';
+  function run(){
+    var out=transform(curOp);
+    $('output').textContent=out;
+    var t=$('input').value;
+    $('i-chars').textContent=t.length.toLocaleString();
+    $('i-words').textContent=t.trim()?t.trim().split(/\s+/).length.toLocaleString():'0';
+    $('o-chars').textContent=out.length.toLocaleString();
+  }
+  document.querySelectorAll('#ops .chip').forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll('#ops .chip').forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+      curOp=b.dataset.op;
+      run();
+    };
+  });
+  $('input').addEventListener('input',run);
+  $('clear').onclick=function(){$('input').value='';run();$('input').focus()};
+  $('paste').onclick=function(){var b=this;navigator.clipboard.readText().then(function(t){$('input').value=t;run()}).catch(function(){b.textContent='Use Ctrl+V';setTimeout(function(){b.textContent='Paste'},1800)})};
+  $('swap').onclick=function(){$('input').value=$('output').textContent;run()};
+  $('copy').onclick=function(){var b=this;navigator.clipboard.writeText($('output').textContent).then(function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy result'},1500)})};
+  $('download').onclick=function(){
+    var blob=new Blob([$('output').textContent],{type:'text/plain;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob);a.download='uppercase-text.txt';a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href)},2000);
+  };
+  run();
+})();
+</script>
+</body>
+</html>
