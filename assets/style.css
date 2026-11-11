@@ -150,3 +150,11 @@ textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-so
   .mega-txt small{white-space:normal}
   .dropdown-mega a.mega-all{margin-top:4px;padding:8px 11px 0;border-top:none}
 }
+
+/* ===== Breadcrumb ===== */
+.breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:13px;color:var(--muted);margin:0 0 16px;text-align:left;justify-content:flex-start;line-height:1.5}
+.breadcrumb a{color:var(--muted);font-weight:500}
+.breadcrumb a:hover{color:var(--primary)}
+.breadcrumb .sep{color:#c9cdd4;font-size:12px;user-select:none}
+.breadcrumb [aria-current]{color:var(--ink);font-weight:600}
+@media(max-width:768px){.breadcrumb{margin-bottom:12px;font-size:12px}}
