@@ -128,3 +128,25 @@ textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-so
 .form-card input{border:1px solid var(--border);border-radius:var(--radius);padding:11px 14px;font-size:15px;font-family:inherit;outline:none}
 .form-card input:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-soft)}
 .form-status{margin-top:14px;font-size:14px;color:#16a34a;display:none}
+
+/* ===== Tools mega dropdown ===== */
+.has-dropdown > .dropdown::before{content:"";position:absolute;left:-8px;right:-8px;top:-12px;height:12px}
+.has-mega > .dropdown-mega{left:auto;right:0;width:min(600px,calc(100vw - 40px));padding:10px}
+.dropdown-mega .mega-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+.dropdown-mega .mega-item{display:flex;flex-direction:row;align-items:center;gap:11px;padding:9px 11px;border-radius:8px}
+.mega-ico{flex:0 0 32px;width:32px;height:32px;border-radius:9px;background:var(--primary-soft);color:var(--primary);display:inline-flex;align-items:center;justify-content:center;transition:.15s}
+.mega-ico svg{width:17px;height:17px}
+.mega-txt{display:flex;flex-direction:column;min-width:0}
+.mega-txt b{font-size:14px;font-weight:600;line-height:1.35;color:inherit}
+.mega-txt small{color:var(--muted);font-size:12px;font-weight:400;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dropdown-mega .mega-item:hover .mega-ico{background:var(--primary);color:#fff}
+.dropdown-mega .mega-item:hover .mega-txt small{color:var(--primary)}
+.dropdown-mega a.mega-all{display:flex;flex-direction:row;justify-content:space-between;align-items:center;margin-top:8px;padding:10px 11px 3px;border-top:1px solid var(--border);border-radius:0;font-size:13px;font-weight:600;color:var(--primary)}
+.dropdown-mega a.mega-all:hover{background:transparent;color:var(--primary-hover)}
+@media(max-width:768px){
+  .has-dropdown > .dropdown::before{display:none}
+  .has-mega > .dropdown-mega{width:auto;padding:2px 0 0 10px}
+  .dropdown-mega .mega-grid{grid-template-columns:1fr}
+  .mega-txt small{white-space:normal}
+  .dropdown-mega a.mega-all{margin-top:4px;padding:8px 11px 0;border-top:none}
+}
