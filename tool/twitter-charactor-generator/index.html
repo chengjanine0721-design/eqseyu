@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Twitter Character Counter — Check Your X Post Against 280 Characters | eqseyu.com</title>
+<meta name="description" content="Free Twitter (X) character counter with Twitter's real weighted counting. See how many characters you have left out of 280, and auto-split long text into a thread.">
+<link rel="canonical" href="https://eqseyu.com/tool/twitter-charactor-generator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Twitter Character Counter — 280 Character Limit Checker">
+<meta property="og:description" content="Count X post characters the way Twitter does, including CJK double-weighting and 23-character URLs. Auto-split into a thread.">
+<meta property="og:url" content="https://eqseyu.com/tool/twitter-charactor-generator/">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/tool.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Twitter Character Counter","url":"https://eqseyu.com/tool/twitter-charactor-generator/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Count characters for X (Twitter) posts using Twitter's weighted counting, with thread splitting."}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">e</span>eqseyu<span style="color:var(--primary)">.com</span></a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlist').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlist">
+      <li><a class="nav-item" href="/">Home</a></li>
+      <li><a class="nav-item active" href="/tools/">Tools</a></li>
+      <li class="has-dropdown">
+        <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
+        <ul class="dropdown">
+          <li><a href="/about/">About Us<small>Who we are and what we do</small></a></li>
+          <li><a href="/privacy/">Privacy Policy<small>How we handle data</small></a></li>
+          <li><a href="/contact/">Contact Us<small>Get in touch</small></a></li>
+          <li><a href="/terms/">Terms of Service<small>Using this site</small></a></li>
+        </ul>
+      </li>
+      <li><a class="btn btn-primary nav-cta" href="/tools/">Explore Tools</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Twitter Character Counter</h1>
+    <p>Count your post the way X (Twitter) counts it — with double-weighted CJK characters and 23-character URLs — and auto-split long text into a thread.</p>
+  </div>
+</section>
+
+<div class="wrap" style="padding-bottom:36px">
+  <div class="tool-layout">
+    <div class="panel">
+      <h2>Your post <small>type or paste</small></h2>
+      <textarea id="input" class="tool-textarea" style="min-height:200px" placeholder="What's happening?"></textarea>
+      <div class="btn-row">
+        <button class="btn btn-ghost btn-sm" id="clear">Clear</button>
+        <button class="btn btn-ghost btn-sm" id="paste">Paste</button>
+        <button class="btn btn-primary btn-sm" id="copy">Copy post</button>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-head"><span id="countLabel">0 / 280</span><span id="remainLabel">280 left</span></div>
+        <div class="progress" id="bar"><i id="barFill"></i></div>
+      </div>
+      <div class="warn-box" id="over">Over the limit by <b id="overBy">0</b> characters. X will not let you post this — trim it or split it into a thread below.</div>
+      <div class="ok-box" id="ok">Fits comfortably — <b id="okLeft">280</b> characters left.</div>
+
+      <div class="field" style="margin-top:18px">
+        <label for="limit">Post limit</label>
+        <select id="limit">
+          <option value="280" selected>280 — standard post</option>
+          <option value="25000">25,000 — X Premium long post</option>
+          <option value="100">100 — profile bio</option>
+          <option value="160">160 — one SMS segment</option>
+        </select>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <h2>Statistics</h2>
+        <div class="stat-grid">
+          <div class="stat-box"><b id="s-weight">0</b><span>Twitter characters</span></div>
+          <div class="stat-box"><b id="s-chars">0</b><span>Total characters</span></div>
+          <div class="stat-box"><b id="s-words">0</b><span>Words</span></div>
+          <div class="stat-box"><b id="s-links">0</b><span>Links (23 each)</span></div>
+        </div>
+        <div class="note" style="margin-bottom:0"><strong>Why two counts?</strong> X counts most Latin letters, digits, punctuation and spaces as <strong>1</strong>, but CJK, Cyrillic, Arabic, emoji and most other scripts as <strong>2</strong>. Every link counts as <strong>23</strong> characters regardless of length.</div>
+      </div>
+
+      <div class="panel" style="margin-top:18px">
+        <h2>Thread splitter <small>auto-break at 280</small></h2>
+        <div id="threadOut" style="max-height:280px;overflow:auto;font-size:14px;color:var(--muted)">Type more than the limit to generate thread parts.</div>
+        <div class="btn-row">
+          <button class="btn btn-ghost btn-sm" id="copyThread">Copy whole thread</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="block alt" style="padding:56px 0">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px"><h2 style="font-size:24px">Character limits across platforms</h2></div>
+    <table class="data-table">
+      <thead><tr><th>Platform / field</th><th class="num">Limit</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>X (Twitter) post</td><td class="num">280</td><td>Weighted — CJK and emoji count as 2</td></tr>
+        <tr><td>X Premium long post</td><td class="num">25,000</td><td>Requires a paid X Premium subscription</td></tr>
+        <tr><td>X profile bio</td><td class="num">160</td><td>Includes emoji in the weighted count</td></tr>
+        <tr><td>X direct message</td><td class="num">10,000</td><td>Per message</td></tr>
+        <tr><td>Instagram caption</td><td class="num">2,200</td><td>Only the first 125 show before "more"</td></tr>
+        <tr><td>LinkedIn post</td><td class="num">3,000</td><td>Roughly 210 characters visible before truncation</td></tr>
+        <tr><td>Meta description</td><td class="num">~160</td><td>Google truncates by pixel width, not characters</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap prose">
+    <h2>How X counts characters</h2>
+    <p>Twitter doesn't count characters one-for-one. Its counting rules (twitter-text) assign a <strong>weight</strong> to each character based on its Unicode range:</p>
+    <ul>
+      <li>Latin letters, digits, standard punctuation and spaces → <strong>1</strong></li>
+      <li>CJK (Chinese, Japanese, Korean), Cyrillic, Arabic, Hebrew, Devanagari and most other scripts → <strong>2</strong></li>
+      <li>Most emoji → <strong>2</strong> (emoji with skin-tone modifiers or ZWJ sequences can be higher)</li>
+      <li>Any URL → <strong>23</strong>, no matter how long it really is</li>
+    </ul>
+    <p>That's why a 140-character Chinese post and a 280-character English post both fill a single tweet.</p>
+
+    <h2>When your post is too long</h2>
+    <ol>
+      <li><strong>Trim ruthlessly first.</strong> Cut adverbs, hedge words ("just", "really", "I think"), and any sentence that restates the previous one.</li>
+      <li><strong>Turn the link into a shorter phrase.</strong> Links cost a flat 23 characters, so shortening the URL text doesn't help — replacing it with "link in bio" might.</li>
+      <li><strong>Split into a thread.</strong> Use the thread splitter on this page: it breaks your text at word boundaries so each part fits within the limit.</li>
+      <li><strong>Move detail to a reply.</strong> Post the hook, then reply with the examples — threads get more reach than one dense post anyway.</li>
+    </ol>
+
+    <div class="note"><strong>Thread tip:</strong> number your parts (1/5, 2/5 …) before posting. Readers drop off unnumbered threads because they can't tell how much is left.</div>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>Why does my counter show 300 when my editor says 280?</summary><div class="faq-body">Your editor likely counts every character as 1. This tool applies Twitter's weighted counting, so CJK characters and emoji are counted as 2 and links as 23 — matching what X actually enforces.</div></details>
+    <details class="faq"><summary>Do emoji count as one or two characters?</summary><div class="faq-body">Usually two. Simple emoji are two code units; emoji with skin-tone modifiers, gender signs or ZWJ sequences (like family emoji) can count as more.</div></details>
+    <details class="faq"><summary>Does a link really count as 23 characters?</summary><div class="faq-body">Yes. Every URL is shortened internally (t.co) and counted as 23 characters, regardless of its real length.</div></details>
+    <details class="faq"><summary>Can I write longer posts?</summary><div class="faq-body">With X Premium you can publish long posts up to 25,000 characters. Switch the limit selector above to 25,000 to check against that instead.</div></details>
+    <details class="faq"><summary>Is my draft uploaded anywhere?</summary><div class="faq-body">No. Everything is calculated in your browser — nothing is sent to a server or stored.</div></details>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sec-head"><h2 style="font-size:24px">Related tools</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><div class="ico">✍️</div><h3><a href="/character-counter/" style="color:inherit">Character Counter</a></h3><p>Detailed character, word and keyword statistics.</p></div>
+      <div class="card"><div class="ico">🔤</div><h3><a href="/tool/character-to-words-calculator/" style="color:inherit">Characters to Words</a></h3><p>Convert a character limit into an expected word count.</p></div>
+      <div class="card"><div class="ico">🔠</div><h3><a href="/tool/upper-case-generator/" style="color:inherit">Uppercase Generator</a></h3><p>Punch up your hook with different case styles.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">eqseyu<span>.com</span></div>
+        <p class="footer-desc">Free, privacy-friendly web tools that run entirely in your browser. No signup, no uploads, no tracking.</p>
+      </div>
+      <div><h4>Tools</h4><ul>
+        <li><a href="/character-counter/">Character Counter</a></li>
+        <li><a href="/tool/twitter-charactor-generator/">Twitter Character Counter</a></li>
+        <li><a href="/tools/">All Tools</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 eqseyu.com. All rights reserved.</div>
+      <div><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var URL_RE=/(https?:\/\/[^\s]+)/g;
+
+  function weightChar(cp){
+    if(cp<=4351)return 1;
+    if(cp>=8192&&cp<=8205)return 1;
+    if(cp>=8208&&cp<=8223)return 1;
+    if(cp>=8242&&cp<=8247)return 1;
+    return 2;
+  }
+  // Twitter counts each URL as 23 chars
+  function weighted(text){
+    var links=text.match(URL_RE)||[];
+    var stripped=text.replace(URL_RE,'');
+    var sum=0;
+    for(var i=0;i<stripped.length;){
+      var cp=stripped.codePointAt(i);
+      sum+=weightChar(cp);
+      i+=cp>0xFFFF?2:1;
+    }
+    return {total:sum+links.length*23,links:links.length};
+  }
+  function limitVal(){return parseInt($('limit').value,10)}
+
+  function stats(){
+    var t=$('input').value;
+    var w=weighted(t);
+    var lim=limitVal();
+    var left=lim-w.total;
+    $('s-weight').textContent=w.total.toLocaleString();
+    $('s-chars').textContent=t.length.toLocaleString();
+    $('s-words').textContent=(t.trim()?t.trim().split(/\s+/).length:0).toLocaleString();
+    $('s-links').textContent=w.links;
+    $('countLabel').textContent=w.total.toLocaleString()+' / '+lim.toLocaleString();
+    $('remainLabel').textContent=left>=0?left.toLocaleString()+' left':Math.abs(left).toLocaleString()+' over';
+    var pct=Math.min(100,Math.round(w.total/lim*100));
+    $('barFill').style.width=pct+'%';
+    var bar=$('bar');
+    bar.className='progress'+(left<0?' over':(pct>=90?' near':''));
+    if(left<0){
+      $('over').classList.add('show');$('ok').classList.remove('show');
+      $('overBy').textContent=Math.abs(left).toLocaleString();
+    }else if(w.total>0){
+      $('ok').classList.add('show');$('over').classList.remove('show');
+      $('okLeft').textContent=left.toLocaleString();
+    }else{
+      $('over').classList.remove('show');$('ok').classList.remove('show');
+    }
+    thread(t,lim,w.total);
+  }
+  function thread(t,lim,total){
+    var box=$('threadOut');
+    if(!t.trim()||total<=lim){
+      box.innerHTML='<span style="color:var(--muted)">Type more than the limit to generate thread parts.</span>';
+      return;
+    }
+    var words=t.split(/(\s+)/);
+    var parts=[],cur='';
+    words.forEach(function(w){
+      var test=cur+w;
+      if(weighted(test).total>lim&&cur.trim()){
+        parts.push(cur.trim());
+        cur=w.replace(/^\s+/,'');
+      }else{
+        cur=test;
+      }
+    });
+    if(cur.trim())parts.push(cur.trim());
+    box.innerHTML=parts.map(function(p,i){
+      var wt=weighted(p).total;
+      return '<div style="border:1px solid var(--border);border-radius:10px;padding:10px 12px;margin-bottom:8px;background:#fff">'
+        +'<div style="font-size:12px;color:var(--primary);font-weight:600;margin-bottom:4px">'+(i+1)+'/'+parts.length+' · '+wt+'/'+lim+'</div>'
+        +'<div style="color:var(--ink);white-space:pre-wrap">'+p.replace(/</g,'&lt;')+'</div></div>';
+    }).join('');
+    window.__thread=parts.map(function(p,i){return (i+1)+'/'+parts.length+'\n'+p}).join('\n\n');
+  }
+  $('input').addEventListener('input',stats);
+  $('limit').addEventListener('change',stats);
+  $('clear').onclick=function(){$('input').value='';stats();$('input').focus()};
+  $('paste').onclick=function(){var b=this;navigator.clipboard.readText().then(function(t){$('input').value=t;stats()}).catch(function(){b.textContent='Use Ctrl+V';setTimeout(function(){b.textContent='Paste'},1800)})};
+  $('copy').onclick=function(){var b=this;navigator.clipboard.writeText($('input').value).then(function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy post'},1500)})};
+  $('copyThread').onclick=function(){var b=this;var data=window.__thread||'';navigator.clipboard.writeText(data).then(function(){b.textContent=data?'Copied!':'Nothing to copy';setTimeout(function(){b.textContent='Copy whole thread'},1600)})};
+  stats();
+})();
+</script>
+</body>
+</html>
