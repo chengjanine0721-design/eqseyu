@@ -27,13 +27,13 @@
         <div class="dropdown dropdown-mega">
           <div class="mega-cols">
             <div class="mega-col">
-              <div class="mega-head"><span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg></span>Word count tools</div>
+              <div class="mega-head"><span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg></span>Tools</div>
               <a class="mega-link" href="/character-counter/">Character Counter</a>
               <a class="mega-link" href="/tool/character-to-words-calculator/">Characters to Words</a>
               <a class="mega-link" href="/tool/words-to-page-calculator/">Words to Pages</a>
             </div>
             <div class="mega-col">
-              <div class="mega-head"><span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.2 7.5L4 20.5l1.6-4.6A8.4 8.4 0 1 1 21 11.5z"/></svg></span>Word count by scenario</div>
+              <div class="mega-head" style="visibility:hidden">Word count by scenario</div>
               <a class="mega-link" href="/tool/eassy-word-counter/">Essay Word Count</a>
               <a class="mega-link" href="/tool/twitter-charactor-generator/">Twitter Word Count</a>
               <a class="mega-link" href="/tool/upper-case-generator/">Uppercase Generator</a>
@@ -80,7 +80,7 @@
       </form>
     </div>
     <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:18px">
- Prefer email? Write to us directly at <a href="mailto:contact@eqseyu.com">contact@eqseyu.com</a>
+ Prefer email? Write to us directly at <a href="mailto:eqseyuadmin@eqseyu.com">eqseyuadmin@eqseyu.com</a>
     </p>
     <p style="text-align:center;color:var(--muted);font-size:14px;margin-top:8px">
  If something looked wrong, mention the tool you used, for example the word count checker or the words to pages calculator, and we can trace it faster.
@@ -138,7 +138,7 @@ document.getElementById('cform').addEventListener('submit',function(e){
   var name=encodeURIComponent(document.getElementById('cname').value);
   var mail=encodeURIComponent(document.getElementById('cmail').value);
   var msg=encodeURIComponent(document.getElementById('cmsg').value);
-  window.location.href='mailto:contact@eqseyu.com?subject='+encodeURIComponent('eqseyu.com message from '+name)+'&body='+encodeURIComponent('From: '+decodeURIComponent(mail)+'\n\n'+decodeURIComponent(msg));
+  window.location.href='mailto:eqseyuadmin@eqseyu.com?subject='+encodeURIComponent('eqseyu.com message from '+name)+'&body='+encodeURIComponent('From: '+decodeURIComponent(mail)+'\n\n'+decodeURIComponent(msg));
 });
 </script>
 </body>
