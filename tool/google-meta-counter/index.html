@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Meta Tags Length Checker | Title and Description Counter | eqseyu.com</title>
+<meta name="description" content="Free Google meta tags length checker. Count characters and pixels in your title tag and meta description, preview your Google search snippet and avoid truncation.">
+<link rel="canonical" href="https://eqseyu.com/tool/google-meta-counter/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Google Meta Tags Length Checker | Title and Description Counter | eqseyu.com">
+<meta property="og:description" content="Free Google meta tags length checker. Count characters and pixels in your title tag and meta description, preview your Google search snippet and avoid truncation.">
+<meta property="og:url" content="https://eqseyu.com/tool/google-meta-counter/">
+<link rel="stylesheet" href="/assets/style.css">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/tool.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Google Meta Tags Length Checker","url":"https://eqseyu.com/tool/google-meta-counter/","applicationCategory":"SeoApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Live character and pixel length counter for Google title tags and meta descriptions with a search snippet preview."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://eqseyu.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://eqseyu.com/tools/"},{"@type":"ListItem","position":3,"name":"Google Meta Counter","item":"https://eqseyu.com/tool/google-meta-counter/"}]}
+</script>
+<style>
+.serp{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px 26px;font-family:Arial,sans-serif}
+.serp .site{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.serp .favicon{width:28px;height:28px;border-radius:50%;background:#f1f3f4;display:flex;align-items:center;justify-content:center;font-size:13px;color:#5f6368;flex:0 0 28px}
+.serp .site .line{min-width:0}
+.serp .site b{display:block;font-size:14px;color:#202124;font-weight:400;line-height:1.3}
+.serp .site small{display:block;font-size:12px;color:#5f6368;line-height:1.3}
+.serp .stitle{font-size:20px;line-height:1.3;color:#1a0dab;margin:0 0 6px;overflow:hidden;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+.serp .sdesc{font-size:14px;line-height:1.58;color:#4d5156;margin:0;overflow:hidden;display:-webkit-box}
+.serp .stitle.ok,.serp .sdesc.ok{-webkit-line-clamp:2}
+.meter{margin-top:10px}
+.meter .mrow{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:5px}
+.meter .mrow b{color:var(--ink)}
+.meter .track{height:7px;border-radius:99px;background:#e8edf3;overflow:hidden}
+.meter .track i{display:block;height:100%;border-radius:99px;background:var(--primary);transition:width .15s,background .15s}
+.meter .track.warn i{background:#f59e0b}
+.meter .track.over i{background:#dc2626}
+.status{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;margin-top:8px}
+.status.good{background:#e7f6ec;color:#15803d}
+.status.warn{background:#fdf3e0;color:#b45309}
+.status.over{background:#fdeaea;color:#b91c1c}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">e</span>Eqseyu</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlist').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlist">
+      <li><a class="nav-item" href="/">Home</a></li>
+      <li class="has-dropdown has-mega">
+        <a class="nav-item active" href="/tools/" onclick="if(window.matchMedia('(max-width:768px)').matches){this.parentElement.classList.toggle('open');return false;}">Tools <span class="caret"></span></a>
+        <div class="dropdown dropdown-mega">
+          <div class="mega-cols">
+            <div class="mega-col">
+              <div class="mega-head"><span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg></span>Tools</div>
+              <a class="mega-link" href="/character-counter/">Character Counter</a>
+              <a class="mega-link" href="/tool/character-to-words-calculator/">Characters to Words</a>
+              <a class="mega-link" href="/tool/words-to-page-calculator/">Words to Pages</a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-head" style="visibility:hidden">Word count by scenario</div>
+              <a class="mega-link" href="/tool/eassy-word-counter/">Essay Word Count</a>
+              <a class="mega-link" href="/tool/twitter-charactor-generator/">Twitter Word Count</a>
+              <a class="mega-link" href="/tool/google-meta-counter/">Google Meta Count</a>
+              <a class="mega-link" href="/tool/upper-case-generator/">Uppercase Generator</a>
+              <a class="mega-link" href="/tool/lower-case-generator/">Lowercase Generator</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
+        <ul class="dropdown">
+          <li><a href="/about/">About Us<small>Who we are and what we do</small></a></li>
+          <li><a href="/privacy/">Privacy Policy<small>How we handle data</small></a></li>
+          <li><a href="/contact/">Contact Us<small>Get in touch</small></a></li>
+          <li><a href="/terms/">Terms of Service<small>Using this site</small></a></li>
+        </ul>
+      </li>
+      <li><a class="btn btn-primary nav-cta" href="/tools/">Explore Tools</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/tools/">Tools</a><span class="sep">/</span><span aria-current="page">Google Meta Counter</span></nav>
+<h1>Google Meta Counter</h1>
+    <p>Check your title tag and meta description against Google search limits. Count characters and pixels, and see your snippet exactly the way searchers will see it.</p>
+  </div>
+</section>
+
+<div class="wrap" style="padding-bottom:36px">
+  <div class="tool-layout">
+    <div class="panel">
+      <h2>Title tag <small>the blue headline in search results</small></h2>
+      <textarea id="mtitle" class="tool-textarea" style="min-height:90px" placeholder="Enter your page title here">Free Word Counter Online and Text Tools | eqseyu.com</textarea>
+
+      <h2 style="margin-top:22px">Meta description <small>the grey text under the title</small></h2>
+      <textarea id="mdesc" class="tool-textarea" style="min-height:130px" placeholder="Enter your meta description here">A free word counter online for characters, words and sentences. Check a word count, convert words to pages or change letter case. Nothing is uploaded.</textarea>
+      <div class="btn-row">
+        <button class="btn btn-ghost btn-sm" id="clear">Clear both</button>
+        <button class="btn btn-ghost btn-sm" id="copyT">Copy title</button>
+        <button class="btn btn-ghost btn-sm" id="copyD">Copy description</button>
+      </div>
+    </div>
+
+    <div>
+      <div class="panel">
+        <h2>Length check</h2>
+        <div class="meter">
+          <div class="mrow"><span>Title</span><span><b id="tChars">0</b> chars · <b id="tPix">0</b> px</span></div>
+          <div class="track" id="tTrack"><i id="tFill"></i></div>
+          <div class="status good" id="tStatus">Good length</div>
+        </div>
+        <div class="meter" style="margin-top:20px">
+          <div class="mrow"><span>Description</span><span><b id="dChars">0</b> chars · <b id="dPix">0</b> px</span></div>
+          <div class="track" id="dTrack"><i id="dFill"></i></div>
+          <div class="status good" id="dStatus">Good length</div>
+        </div>
+        <div class="stat-grid" style="margin-top:18px">
+          <div class="stat-box"><b id="tWords">0</b><span>Title words</span></div>
+          <div class="stat-box"><b id="dWords">0</b><span>Description words</span></div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:18px">
+        <h2>Google preview <small id="devLabel">desktop result</small></h2>
+        <div class="chip-row" id="device">
+          <button class="chip active" data-d="desktop">Desktop</button>
+          <button class="chip" data-d="mobile">Mobile</button>
+        </div>
+        <div class="serp" style="margin-top:14px">
+          <div class="site">
+            <div class="favicon">e</div>
+            <div class="line"><b>eqseyu.com</b><small>https://eqseyu.com</small></div>
+          </div>
+          <p class="stitle ok" id="pTitle"></p>
+          <p class="sdesc ok" id="pDesc"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="block alt" style="padding:56px 0">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:26px"><h2 style="font-size:24px">Google length limits at a glance</h2></div>
+    <table class="data-table">
+      <thead><tr><th>Element</th><th class="num">Safe characters</th><th class="num">Pixel width limit</th><th>What happens if you exceed it</th></tr></thead>
+      <tbody>
+        <tr><td>Title tag (desktop)</td><td class="num">50 to 60</td><td class="num">about 600 px</td><td>Google cuts the headline and adds an ellipsis</td></tr>
+        <tr><td>Title tag (mobile)</td><td class="num">55 to 65</td><td class="num">about 740 px</td><td>Truncated in the same way, slightly later</td></tr>
+        <tr><td>Meta description (desktop)</td><td class="num">150 to 160</td><td class="num">about 990 px</td><td>Google truncates mid sentence</td></tr>
+        <tr><td>Meta description (mobile)</td><td class="num">120 to 130</td><td class="num">about 920 px</td><td>Truncated earlier than on desktop</td></tr>
+        <tr><td>Very short descriptions</td><td class="num">under 70</td><td class="num">any</td><td>Google may rewrite the snippet from page content</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap prose">
+    <h2>How Google measures title and description length</h2>
+    <p>Google does not count characters first, it measures <strong>pixels</strong>. The same 60 characters can render narrower or wider depending on the letters, so a title full of wide capitals hits the limit sooner than one with narrow letters like i, l and t. That is why this counter shows both numbers, character count for editing and pixel width for the real limit.</p>
+    <p>The measurement here uses the Arial font metrics Google results are rendered with, on a desktop layout of about 600 pixels for titles and 990 pixels for descriptions. Mobile results are narrower in practice but render titles slightly larger, so the safe character ranges shown in the table above already account for it.</p>
+
+    <h2>Writing titles that fit</h2>
+    <ul>
+      <li><strong>Front load the keyword.</strong> The words at the start of a title carry the most weight and survive truncation.</li>
+      <li><strong>Put the brand last.</strong> If the title gets cut, it is usually the tail that disappears, so keep your site name there.</li>
+      <li><strong>Count every word.</strong> Wide letters such as W and M take almost the space of two narrow ones, check the pixel number rather than trusting the character count alone.</li>
+      <li><strong>One idea per title.</strong> Separate two topics with a pipe or a dash only when both matter to searchers.</li>
+    </ul>
+
+    <h2>Writing descriptions that fit</h2>
+    <ul>
+      <li><strong>Aim for 150 to 160 characters.</strong> Long enough to make the case, short enough to avoid the cut.</li>
+      <li><strong>Front load the promise.</strong> Say what the page gives the reader in the first 80 characters.</li>
+      <li><strong>Include a call to action.</strong> Try it, learn how, or check yours today, near the end while space allows.</li>
+      <li><strong>Do not stuff keywords.</strong> Google often rewrites stuffed descriptions, so plain natural sentences survive longest.</li>
+    </ul>
+
+    <h2>Frequently asked questions</h2>
+    <details class="faq"><summary>How many characters is this title in pixels?</summary><div class="faq-body">Characters and pixels measure different things. Roughly 9 to 11 average characters fit in 100 pixels of Google title text, but wide capitals can take double the width of narrow letters. The meter above measures the exact pixel width of what you type.</div></details>
+    <details class="faq"><summary>What is the ideal meta description length?</summary><div class="faq-body">Between 150 and 160 characters for desktop results. Google truncates around 990 pixels, which is usually close to 155 characters of typical English text.</div></details>
+    <details class="faq"><summary>Will Google rewrite my title anyway?</summary><div class="faq-body">Sometimes. Google rewrites titles it considers too long, too short, stuffed with keywords, or a poor match for the content. Staying inside the pixel limit gives your own wording the best chance of being shown.</div></details>
+    <details class="faq"><summary>Does the description pixel count include spaces?</summary><div class="faq-body">Yes, spaces and punctuation render real width, and both are included in the measurement just as they are in the search results.</div></details>
+    <details class="faq"><summary>Is my text uploaded anywhere?</summary><div class="faq-body">No. Everything runs locally in your browser, the preview and counters never transmit your text.</div></details>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><h2>Meta tag questions</h2><p>Quick answers while you optimize.</p></div>
+    <div class="grid grid-3">
+      <div class="card"><h3>How do I check my word count online?</h3><p>Type in the box above and the character, pixel and word counts update as you type, no button to press.</p></div>
+      <div class="card"><h3>Why is my title cut off in Google?</h3><p>The pixel width passed the limit. Shorten the tail or move the brand name forward until the meter turns green.</p></div>
+      <div class="card"><h3>Do keywords in the description help ranking?</h3><p>Not directly, but Google bolds the words searchers typed, so a matching description lifts click through rate.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block alt">
+  <div class="wrap">
+    <div class="sec-head"><h2 style="font-size:24px">Related tools</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><div class="ico">✍️</div><h3><a href="/character-counter/" style="color:inherit">Character Counter</a></h3><p>Full text statistics plus keyword density for any draft.</p></div>
+      <div class="card"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="#0f1419" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div><h3><a href="/tool/twitter-charactor-generator/" style="color:inherit">Twitter Character Counter</a></h3><p>Count X posts the way Twitter counts them, with thread splitting.</p></div>
+      <div class="card"><div class="ico">📄</div><h3><a href="/tool/words-to-page-calculator/" style="color:inherit">Words to Pages</a></h3><p>Convert any word count to pages for your exact font and spacing.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">eqseyu<span>.com</span></div>
+        <p class="footer-desc">Free tools that respect your privacy and run entirely in your browser. No signup, no uploads, no tracking.</p>
+      </div>
+      <div><h4>Tools</h4>
+        <ul class="footer-tools">
+          <li><a href="/character-counter/">Character Counter</a></li>
+          <li><a href="/tool/words-to-page-calculator/">Words to Pages</a></li>
+          <li><a href="/tool/character-to-words-calculator/">Characters to Words</a></li>
+          <li><a href="/tool/eassy-word-counter/">Essay Word Count</a></li>
+          <li><a href="/tool/twitter-charactor-generator/">Twitter Word Count</a></li>
+          <li><a href="/tool/google-meta-counter/">Google Meta Count</a></li>
+          <li><a href="/tool/upper-case-generator/">Uppercase Generator</a></li>
+          <li><a href="/tool/lower-case-generator/">Lowercase Generator</a></li>
+        </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 eqseyu.com. All rights reserved.</div>
+      <div><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+  var LIMITS={
+    desktop:{tp:600,dp:990},
+    mobile:{tp:740,dp:920}
+  };
+  var device='desktop';
+  var canvas=document.createElement('canvas').getContext('2d');
+  function px(text,size){
+    canvas.font=size+'px Arial';
+    return Math.round(canvas.measureText(text).width);
+  }
+  function words(t){t=t.trim();return t?t.split(/\s+/).length:0}
+  function meter(el,fill,track,status,pix,limit,minC,chars){
+    var pct=Math.min(100,Math.round(pix/limit*100));
+    fill.style.width=pct+'%';
+    var st,cls,label;
+    if(pix>limit){
+      cls='over';st='Too long, Google will cut it';
+    }else if(pix>limit*0.9){
+      cls='warn';st='Close to the limit';
+    }else if(chars<minC){
+      cls='warn';st='A bit short';
+    }else{
+      cls='good';st='Good length';
+    }
+    track.className='track'+(cls==='over'?' over':(cls==='warn'?' warn':''));
+    status.className='status '+cls;
+    status.textContent=st;
+  }
+  function render(){
+    var T=$('mtitle').value, D=$('mdesc').value;
+    var lim=LIMITS[device];
+    var tp=px(T,20), dp=px(D,14);
+    $('tChars').textContent=T.length.toLocaleString();
+    $('tPix').textContent=tp.toLocaleString();
+    $('dChars').textContent=D.length.toLocaleString();
+    $('dPix').textContent=dp.toLocaleString();
+    $('tWords').textContent=words(T).toLocaleString();
+    $('dWords').textContent=words(D).toLocaleString();
+    meter(null,$('tFill'),$('tTrack'),$('tStatus'),tp,lim.tp,30,T.length);
+    meter(null,$('dFill'),$('dTrack'),$('dStatus'),dp,lim.dp,70,D.length);
+    var pt=$('pTitle'), pd=$('pDesc');
+    pt.textContent=T||'Your page title appears here';
+    pd.textContent=D||'Your meta description appears here';
+    pt.className='stitle'+(tp>lim.tp?'':' ok');
+    pd.className='sdesc'+(dp>lim.dp?'':' ok');
+  }
+  $('mtitle').addEventListener('input',render);
+  $('mdesc').addEventListener('input',render);
+  document.querySelectorAll('#device .chip').forEach(function(b){
+    b.onclick=function(){
+      document.querySelectorAll('#device .chip').forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+      device=b.dataset.d;
+      $('devLabel').textContent=device+' result';
+      render();
+    };
+  });
+  $('clear').onclick=function(){$('mtitle').value='';$('mdesc').value='';render()};
+  $('copyT').onclick=function(){navigator.clipboard.writeText($('mtitle').value);var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy title'},1500)};
+  $('copyD').onclick=function(){navigator.clipboard.writeText($('mdesc').value);var b=this;b.textContent='Copied!';setTimeout(function(){b.textContent='Copy description'},1500)};
+  render();
+})();
+</script>
+</body>
+</html>
