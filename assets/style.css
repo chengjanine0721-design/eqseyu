@@ -112,7 +112,7 @@ textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px var(--primary-so
 
 /* ===== Footer ===== */
 .site-footer{background:#0f1621;color:#a8b0ba;margin-top:80px}
-.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px;padding:56px 0 40px}
+.footer-inner{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:32px;padding:56px 0 40px}
 .footer-tools{display:flex;flex-direction:column}
 .footer-tools li{margin:7px 0;white-space:nowrap}
 .footer-inner h4{color:#fff;font-size:14px;font-weight:600;margin-bottom:14px}
