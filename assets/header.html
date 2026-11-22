@@ -1,0 +1,43 @@
+<!-- Shared header for eqseyu.com -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">e</span>Eqseyu</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlist').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navlist">
+      <li><a class="nav-item" href="/">Home</a></li>
+      <li class="has-dropdown has-mega">
+        <a class="nav-item" href="/tools/" onclick="if(window.matchMedia('(max-width:768px)').matches){this.parentElement.classList.toggle('open');return false;}">Tools <span class="caret"></span></a>
+        <div class="dropdown dropdown-mega">
+          <div class="mega-cols">
+            <div class="mega-col">
+              <div class="mega-head"><span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg></span>Tools</div>
+              <a class="mega-link" href="/tool/character-counter/">Character Counter</a>
+              <a class="mega-link" href="/tool/character-to-words-calculator/">Characters to Words</a>
+              <a class="mega-link" href="/tool/words-to-page-calculator/">Words to Pages</a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-head" style="visibility:hidden">Word count by scenario</div>
+              <a class="mega-link" href="/tool/eassy-word-counter/">Essay Word Count</a>
+              <a class="mega-link" href="/tool/twitter-charactor-generator/">Twitter Word Count</a>
+              <a class="mega-link" href="/tool/google-meta-counter/">Google Meta Count</a>
+              <a class="mega-link" href="/tool/upper-case-generator/">Uppercase Generator</a>
+              <a class="mega-link" href="/tool/lower-case-generator/">Lowercase Generator</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
+        <ul class="dropdown">
+          <li><a href="/about/">About Us<small>Who we are and what we do</small></a></li>
+          <li><a href="/privacy/">Privacy Policy<small>How we handle data</small></a></li>
+          <li><a href="/contact/">Contact Us<small>Get in touch</small></a></li>
+          <li><a href="/terms/">Terms of Service<small>Using this site</small></a></li>
+        </ul>
+      </li>
+      <li><a class="btn btn-primary nav-cta" href="/tools/">Explore Tools</a></li>
+    </ul>
+  </div>
+</header>
