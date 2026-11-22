@@ -16,4 +16,17 @@
   <url><loc>https://eqseyu.com/contact/</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
   <url><loc>https://eqseyu.com/privacy/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://eqseyu.com/terms/</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://eqseyu.com/tool/backwards-text-generator/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/syllable-counter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/text-repeater/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/sentence-counter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/remove-line-breaks/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/line-counter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/random-noun-generator/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/paragraph-counter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/character-frequency-counter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/facebook-text-formatter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/text-compare/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/hashtag-counter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://eqseyu.com/tool/comma-counter/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

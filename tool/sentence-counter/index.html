@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentence Counter | eqseyu.com</title>
+<meta name="description" content="Free sentence counter to count sentences in any paragraph. Also a sentences counter and online sentence counter with word and average-length stats.">
+<link rel="canonical" href="https://eqseyu.com/tool/sentence-counter/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sentence Counter | eqseyu.com">
+<meta property="og:description" content="Free sentence counter to count sentences in any paragraph. Also a sentences counter and online sentence counter with word and average-length stats.">
+<meta property="og:url" content="https://eqseyu.com/tool/sentence-counter/">
+<link rel="stylesheet" href="/assets/style.css?v=20261122">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/assets/tool.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Sentence Counter","url":"https://eqseyu.com/tool/sentence-counter/","applicationCategory":"UtilityApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free sentence counter to count sentences in any paragraph. Also a sentences counter and online sentence counter with word and average-length stats."}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://eqseyu.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://eqseyu.com/tools/"},{"@type":"ListItem","position":3,"name":"Sentence Counter","item":"https://eqseyu.com/tool/sentence-counter/"}]}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="/"><span class="logo-mark">e</span>Eqseyu</a>
+    <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navlist').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navlist">
+      <li><a class="nav-item" href="/">Home</a></li>
+      <li class="has-dropdown has-mega">
+        <a class="nav-item active" href="/tools/" onclick="if(window.matchMedia('(max-width:768px)').matches){this.parentElement.classList.toggle('open');return false;}">Tools <span class="caret"></span></a>
+        <div class="dropdown dropdown-mega">
+          <div class="mega-cols">
+            <div class="mega-col">
+              <div class="mega-head"><span class="mega-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7V5h14v2M12 5v14M9 19h6"/></svg></span>Tools</div>
+              <a class="mega-link" href="/tool/character-counter/">Character Counter</a>
+              <a class="mega-link" href="/tool/character-to-words-calculator/">Characters to Words</a>
+              <a class="mega-link" href="/tool/words-to-page-calculator/">Words to Pages</a>
+              <a class="mega-link" href="/tool/eassy-word-counter/">Essay Word Count</a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-head" style="visibility:hidden">Word count by scenario</div>
+              <a class="mega-link" href="/tool/twitter-charactor-generator/">Twitter Word Count</a>
+              <a class="mega-link" href="/tool/google-meta-counter/">Google Meta Count</a>
+              <a class="mega-link" href="/tool/upper-case-generator/">Uppercase Generator</a>
+              <a class="mega-link" href="/tool/lower-case-generator/">Lowercase Generator</a>
+            </div>
+            <div class="mega-col">
+              <div class="mega-head" style="visibility:hidden">More tools</div>
+              <a class="mega-link" href="/tool/backwards-text-generator/">Backwards Text Generator</a>
+              <a class="mega-link" href="/tool/syllable-counter/">Syllable Counter</a>
+              <a class="mega-link" href="/tool/text-repeater/">Text Repeater</a>
+              <a class="mega-link" href="/tool/sentence-counter/">Sentence Counter</a>
+              <a class="mega-link" href="/tool/remove-line-breaks/">Remove Line Breaks</a>
+              <a class="mega-link" href="/tool/line-counter/">Line Counter</a>
+              <a class="mega-link" href="/tool/random-noun-generator/">Random Noun Generator</a>
+              <a class="mega-link" href="/tool/paragraph-counter/">Paragraph Counter</a>
+              <a class="mega-link" href="/tool/character-frequency-counter/">Character Frequency Counter</a>
+              <a class="mega-link" href="/tool/facebook-text-formatter/">Facebook Text Formatter</a>
+              <a class="mega-link" href="/tool/text-compare/">Text Compare</a>
+              <a class="mega-link" href="/tool/hashtag-counter/">Hashtag Counter</a>
+              <a class="mega-link" href="/tool/comma-counter/">Comma Counter</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="has-dropdown">
+        <a class="nav-item" href="#" onclick="this.parentElement.classList.toggle('open');return false;">More <span class="caret"></span></a>
+        <ul class="dropdown">
+          <li><a href="/about/">About Us<small>Who we are and what we do</small></a></li>
+          <li><a href="/privacy/">Privacy Policy<small>How we handle data</small></a></li>
+          <li><a href="/contact/">Contact Us<small>Get in touch</small></a></li>
+          <li><a href="/terms/">Terms of Service<small>Using this site</small></a></li>
+        </ul>
+      </li>
+      <li><a class="btn btn-primary nav-cta" href="/tools/">Explore Tools</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+          <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span class="sep">/</span><a href="/tools/">Tools</a><span class="sep">/</span><span aria-current="page">Sentence Counter</span></nav>
+<h1>Sentence Counter</h1>
+    <p>Find out how many sentences are in your writing with a sentence counter that also reports word count and average sentence length. A quick online sentence counter for students and writers.</p>
+  </div>
+</section>
+
+<div class="wrap" style="padding-bottom:24px">
+  <div class="panel">
+
+    <textarea class="tool-textarea" id="in" placeholder="Paste a paragraph to count sentences…">
+The quick brown fox jumps over the lazy dog. She waited, and then she left. Was anyone watching?</textarea>
+    <div class="btn-row"><button class="btn btn-primary" id="run">Count sentences</button></div>
+    <div class="stat-grid" id="stats"></div>
+    <div class="out-box"><span class="unit">Sentence list</span><div class="result" id="out"></div></div>
+
+  </div>
+</div>
+
+<section class="block alt">
+  <div class="wrap prose">
+<h2>What is a sentence counter?</h2>
+    <p>A <strong>sentence counter</strong> tells you how many sentences are in a piece of writing. This <strong>online sentence counter</strong> splits your text on sentence-ending punctuation and shows a numbered sentence list alongside word count and average sentence length.</p>
+
+    <h2>How many sentences are in my text?</h2>
+    <p>Wondering <strong>how many sentences</strong> you have written? Paste your paragraph and the <strong>sentences counter</strong> answers instantly. It is useful for checking assignment length, balancing paragraph structure and editing for readability.</p>
+
+    <h2>Count sentences for better writing</h2>
+    <p>The <strong>sentence count</strong> and words-per-sentence figure help you spot run-ons and choppy writing. A good target for clear prose is roughly 15 to 20 words per sentence, and this tool makes it easy to <strong>count sentences</strong> as you revise.</p>
+
+    <h2>Frequently asked questions</h2>
+<details class="faq"><summary>How does a sentence counter detect sentences?</summary><div class="faq-body">It splits text at periods, exclamation marks and question marks followed by a space and a capital letter, then lists each sentence with its number.</div></details>
+<details class="faq"><summary>Can I use this as an online sentence counter for essays?</summary><div class="faq-body">Yes. Paste any essay or paragraph into the online sentence counter to see the sentence count, total words and average sentence length.</div></details>
+<details class="faq"><summary>Does it handle abbreviations?</summary><div class="faq-body">It uses common punctuation rules, so abbreviations with periods may be treated as sentence endings. You can still read the numbered list and adjust manually. If you searched for a "sentance counter", this is the same tool.</div></details>
+<details class="faq"><summary>What does the sentence count tell me?</summary><div class="faq-body">The sentence count shows how many sentences your text contains, which helps you judge paragraph length and writing rhythm at a glance.</div></details>
+<details class="faq"><summary>Is there a sentences counter for long documents?</summary><div class="faq-body">This sentences counter works on pasted text of any length, so you can check a single paragraph or a full page of writing.</div></details>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><h2 style="font-size:24px">Related tools</h2></div>
+    <div class="grid grid-3">
+      <div class="card"><div class="ico">🧹</div><h3><a href="/tool/remove-line-breaks/" style="color:inherit">Remove Line Breaks</a></h3><p>Open the remove line breaks tool.</p></div>
+      <div class="card"><div class="ico">𝗕</div><h3><a href="/tool/facebook-text-formatter/" style="color:inherit">Facebook Text Formatter</a></h3><p>Open the facebook text formatter tool.</p></div>
+      <div class="card"><div class="ico">🔄</div><h3><a href="/tool/backwards-text-generator/" style="color:inherit">Backwards Text Generator</a></h3><p>Open the backwards text generator tool.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">eqseyu<span>.com</span></div>
+        <p class="footer-desc">Free tools that respect your privacy and run entirely in your browser. No signup, no uploads, no tracking.</p>
+      </div>
+      <div><h4>Tools</h4>
+        <ul class="footer-tools">
+            <li><a href="/tool/character-counter/">Character Counter</a></li>
+            <li><a href="/tool/words-to-page-calculator/">Words to Pages</a></li>
+            <li><a href="/tool/character-to-words-calculator/">Characters to Words</a></li>
+            <li><a href="/tool/eassy-word-counter/">Essay Word Count</a></li>
+            <li><a href="/tool/twitter-charactor-generator/">Twitter Word Count</a></li>
+            <li><a href="/tool/upper-case-generator/">Uppercase Generator</a></li>
+            <li><a href="/tool/lower-case-generator/">Lowercase Generator</a></li>
+            <li><a href="/tool/backwards-text-generator/">Backwards Text</a></li>
+            <li><a href="/tool/syllable-counter/">Syllable Counter</a></li>
+            <li><a href="/tool/sentence-counter/">Sentence Counter</a></li>
+            <li><a href="/tool/line-counter/">Line Counter</a></li>
+            <li><a href="/tool/text-repeater/">Text Repeater</a></li>
+        </ul></div>
+      <div>
+        <h4>Blog</h4>
+        <ul>
+          <li><a href="/blog/">https://eqseyu.com/blog/</a></li>
+          <li><a href="/blog/pages-word-count/">How to Count Words on Pages</a></li>
+        </ul>
+      </div>
+      <div><h4>Company</h4><ul>
+        <li><a href="/about/">About Us</a></li>
+        <li><a href="/contact/">Contact Us</a></li>
+      </ul></div>
+      <div><h4>Legal</h4><ul>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Service</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 eqseyu.com. All rights reserved.</div>
+      <div><a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="/contact/">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+
+function $(id){return document.getElementById(id)}
+function setOut(txt){$('out').textContent=txt}
+function copyOut(){
+  var b=$('copy');navigator.clipboard.writeText($('out').textContent)
+    .then(function(){b.textContent='Copied!';setTimeout(function(){b.textContent='Copy result'},1500)});
+}
+function fmt(n){return n.toLocaleString()}
+
+
+(function(){
+  function run(){
+    var t=$('in').value.trim();
+    var sents=t?t.split(/(?<=[.!?])\s+(?=[A-Z"'(])|(?<=[.!?])$/gm).map(function(s){return s.trim()}).filter(Boolean):[];
+    if(!sents.length && t) sents=[t];
+    var words=(t.match(/\b\w+\b/g)||[]).length;
+    $('stats').innerHTML='<div class="stat-box"><b>'+fmt(sents.length)+'</b><span>Sentences</span></div>'+
+      '<div class="stat-box"><b>'+fmt(words)+'</b><span>Words</span></div>'+
+      '<div class="stat-box"><b>'+(sents.length?(words/sents.length).toFixed(1):'0')+'</b><span>Words / sentence</span></div>';
+    $('out').innerHTML=sents.map(function(s,i){return (i+1)+'. '+s}).join('<br>') || 'Start typing to count sentences…';
+  }
+  $('run').onclick=run;$('in').addEventListener('input',run);run();
+})();
+
+</script>
+</body>
+</html>
